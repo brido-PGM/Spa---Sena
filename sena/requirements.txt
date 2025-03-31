@@ -1,0 +1,4 @@
+# pip freeze > requirements.txt
+# pip install -r requirements.txt
+Django==4.2.20
+Pillow==9.2.0
