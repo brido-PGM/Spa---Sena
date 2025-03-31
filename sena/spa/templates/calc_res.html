@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block titulo %} Calculadora {% endblock %}
+{% block miga %} 
+    <li class="breadcrumb-item active" aria-current="page">Calculadora</li>
+{% endblock %}
+
+
+{% block cuerpo %}
+    {% if error %}
+    <p>Solo se pueden calcular numero enteros.</p>
+    <a href="{% url 'calc' %}">Calcular Otro</a>
+    {% else %}
+    <p>{{n1}} + {{n2}} = {{res}}</p>
+    <a href="{% url 'calc' %}">Calcular Otro</a>
+    {% endif %}
+{% endblock %}

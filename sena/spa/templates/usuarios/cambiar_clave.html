@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block titulo %} Cambio de Contraseña {% endblock %}
+
+{% block cuerpo %}
+    <form methon="post" class="card m-auto mt-8 col-3 p-3">
+        {% csrf_token %}
+        <h4>Cambiar Contraseña</h4>
+        <input name="clave_actual" type="password" placeholder="Contraseña Actual"><br>
+        <input name="nueva" type="password" placeholder="Contraseña Nueva">
+        <input name="repite_nueva" type="password" placeholder="Repita">
+        <button type="sumbit" class="btn btn-info">Guardar</button>
+    </form>
+{% endblock %}

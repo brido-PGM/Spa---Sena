@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block titulo %} Login {% endblock %}
+{% block miga %} 
+    <li class="breadcrumb-item active" aria-current="page">Login</li>
+{% endblock %}
+
+
+{% block cuerpo %}
+
+    {% if error %}
+        <p>Usuario o Contraseña incorrectos</p>
+        <a href="{% url 'login' %}">Volver a intentar</a>
+    {% else %}
+        <h1>Bienvenido al Spa SENA {{usu}} </h1>
+    {% endif %}
+
+{% endblock %}

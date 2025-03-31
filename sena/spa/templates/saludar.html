@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block titulo %} Saludar {% endblock %}
+{% block miga %} 
+    <li class="breadcrumb-item active" aria-current="page">Saludar</li>
+{% endblock %}
+
+
+{% block cuerpo %}
+    Hola <b style='color:green;'>{{nombre}} {{apellido}}</b>
+{% endblock %}

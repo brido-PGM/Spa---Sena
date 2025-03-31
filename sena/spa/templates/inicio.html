@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block titulo %} Inicio {% endblock %}
+{% block miga %} 
+    <li class="breadcrumb-item active" aria-current="page">Inicio</li>
+{% endblock %}
+
+
+{% block cuerpo %}
+    <img src="{% static 'img/spa_exotic.jpg' %}" width="20%" alt="Salon Spa"> <br>
+    Hola <strong style='color:blue;'>mundo</strong>...!
+    <br>
+    <a href='{% url "login" %}'>Login</a>
+    <a href='{% url "login" %}'>Cambiar Contraseña</a>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block titulo %} Cuadrado {% endblock %}
+{% block miga %} 
+    <li class="breadcrumb-item active" aria-current="page">Cuadrado</li>
+{% endblock %}
+
+
+{% block cuerpo %}
+        <form action="" method="post">
+        {% csrf_token %}
+        <label for="">Digite un numero:</label>
+        <input type="number" name="num1">
+        <br>
+        <button type="submit">Calcular</button>
+    </form>
+{% endblock %}

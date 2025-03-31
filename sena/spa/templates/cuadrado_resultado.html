@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block titulo %} Cuadrado {% endblock %}
+{% block miga %} 
+    <li class="breadcrumb-item active" aria-current="page">Cuadrado</li>
+{% endblock %}
+
+
+{% block cuerpo %}
+        <p>
+            {% if error %}
+                Digite un numero valido para calcular su cuadrado
+            {% else %}
+                El cuadrado del numero: {{num1}} es: <strong>{{resultado}}</strong>
+            {% endif %}
+        </p>
+    <a href="{% url 'cuadrado_formulario' %}">Calcular otro</a>
+{% endblock %}
